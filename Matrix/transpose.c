@@ -1,4 +1,4 @@
-//8. to print the diagonal of a matrix.
+//9. WAP print the transpose of the matrix.
 #include<stdio.h>
 void main()
 {
@@ -6,8 +6,9 @@ void main()
     printf("Enter the No. of Row & column = ");
     scanf("%d%d",&r,&c);
     int a[r][c];
-    if(r==c)
-    {
+    if(r!=c)
+        printf("Not square matrix not possible");
+    else{
     //input
     for(i=0;i<r;i++)
     {
@@ -18,7 +19,7 @@ void main()
          }
     }
      //output
-     printf("\nMatrix = \n");
+    printf("\nMatrix = \n");
     for(i=0;i<r;i++)
     {
         for(j=0;j<c;j++)
@@ -27,20 +28,15 @@ void main()
          }
          printf("\n");
     }
-    //diagonal
-   printf("\nDiagonal Matrix = \n");
-    for(i=0;i<r;i++)
+    //transpose
+    printf("\nTranspose Matrix = \n");
+    for(i=0;i<c;i++)
     {
-        for(j=0;j<c;j++)
+        for(j=0;j<r;j++)
          {
-            if(i==j)
-              printf("%d ",a[i][j]);
-            else
-              printf(" ");
+            printf("%d ",a[j][i]);
          }
          printf("\n");
     }
-  }
-  else
-   printf("It's Not Sq. Matrix so diagonal element can't be found");
+    }
 }
