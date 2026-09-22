@@ -1,0 +1,16 @@
+/*
+sum of series=4,8,16,32.....n
+*/
+#include<stdio.h>
+#include<math.h>
+void main(){
+    int i,n,s=0,m=4;
+    printf("Enter the Range = ");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++){
+        printf("\n%d",m);
+        m=m*2;
+        s=s+m;
+    }
+    printf("\nSum = %d",s);
+}
