@@ -5,7 +5,7 @@ void main()
     int i,j,r,c;
     printf("Enter the No. of Row & column = ");
     scanf("%d%d",&r,&c);
-    int a[r][c];
+    int a[r][c],t[c][r];
     if(r!=c)
         printf("Not square matrix not possible");
     else{
@@ -34,7 +34,8 @@ void main()
     {
         for(j=0;j<r;j++)
          {
-            printf("%d ",a[j][i]);
+            t[i][j]=a[j][i];
+            printf("%d ",t[i][j]);
          }
          printf("\n");
     }
