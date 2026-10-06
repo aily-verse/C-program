@@ -42,5 +42,4 @@ void main()
   }  
   if(f)
    printf("It's not present at no Quadrant");
-  getch();
 }
